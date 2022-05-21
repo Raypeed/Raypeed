@@ -37,7 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #local apps
     'accounts',
+    'apps',
+
+    #third party library
+    'rest_framework',
+    'rest_framework_authtoken',
+    'djoser',
+    'corsheaders',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -119,3 +129,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+RAPYD_SECRET_KEY = os.environ.get('RAPYD_SECRET_KEY')
+RAPYD_ACCESS_KEY = os.environ.get('RAPYD_ACCESS_KEY')
